@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Shorthand</title>
+</head>
+<body>
+<div id="app">
+    <a v-on:click="m1">111111</a><br>
+    <!--缩写-->
+    <a @click="m2">222222</a><br>
+
+    <br><br>
+    <a v-bind:href="url">百度</a><br>
+    <!--简写-->
+    <a :href="url2">京东</a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            a: 1,
+            url: "https://baidu.com",
+            url2: "https://jd.com"
+        },
+        methods: {
+            m1: function () {
+                alert(111)
+            },
+            m2: function () {
+                alert(222)
+            }
+        }
+
+    })
+</script>
+</body>
+</html>
